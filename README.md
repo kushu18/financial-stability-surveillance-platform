@@ -21,7 +21,7 @@ The platform implements an institutional-grade systemic risk intelligence archit
 
 ## Key Features
 
-- **Graph Attention Network (GAT):** Multi-head attention architecture (`DropEdge`, 14 node features ? 32×4 ? 16×4 ? 2) modeling interbank exposure topology, achieving AUC = 0.95.
+- **Graph Attention Network (GAT):** Multi-head attention architecture (`DropEdge`, 14 node features ? 32ï¿½4 ? 16ï¿½4 ? 2) modeling interbank exposure topology, achieving AUC â‰¥ 0.95.
 - **Interactive 3D Interbank Network:** Dynamic 3D network graph highlighting 1-hop and 2-degree contagion cascades with real-time edge weight attention.
 - **Dual Surveillance Modes:**
   - **Historical Replay:** Interactive chronological replay across 3,653 trading days (2015â€“2024) calibrated on historical crisis spikes (COVID-19 market crash, DHFL, IL&FS).
