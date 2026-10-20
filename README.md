@@ -15,7 +15,7 @@
 
 The platform implements an institutional-grade systemic risk intelligence architecture designed to monitor, simulate, and mitigate cascading interbank liquidity shocks.
 
-![System Architecture](docs/screenshots/system_architecture.jpg)
+![System Architecture](docs/screenshots/system_architecture_overview.jpg)
 
 ---
 
