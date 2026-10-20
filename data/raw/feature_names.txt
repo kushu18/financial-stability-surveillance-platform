@@ -1,0 +1,14 @@
+tier1_capital_ratio
+total_capital_ratio
+leverage_ratio
+lcr
+nsfr
+npl_ratio
+cds_spread_bps
+equity_volatility_30d
+interbank_borrowing_ratio
+interbank_exposure_ratio
+network_degree
+eigenvector_centrality
+gsib_score
+capital_buffer

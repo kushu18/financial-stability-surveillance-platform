@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RBI Command Portal</title>
+    <meta
+      name="description"
+      content="A standalone institutional shell for the Financial Contagion Monitor brief, styled for a serious Indian financial oversight context."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="portal-shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <img
+            class="brand-seal"
+            src="assets/rbi-circle.png"
+            alt="Reserve Bank of India emblem"
+          />
+          <div>
+            <p class="brand-kicker">Reserve Bank Style Monitoring Shell</p>
+            <h1 class="brand-title">National Financial Contagion Command Portal</h1>
+          </div>
+        </div>
+        <nav class="topnav" aria-label="Primary">
+          <a href="#overview">Overview</a>
+          <a href="#crisis-replay">Crisis Replay</a>
+          <a href="#coverage">Bank Coverage</a>
+          <a href="#intelligence">System Intelligence</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero section" id="overview">
+          <div class="hero-copy">
+            <p class="eyebrow">Built from the FINAL_V3 master plan</p>
+            <h2>Institutional by design, interactive by default, isolated for later integration.</h2>
+            <p class="hero-text">
+              This standalone portal translates the 33-bank contagion monitor brief into a
+              credible financial oversight interface. It stays separate from your actual
+              project so you can plug your real dashboard, model service, or analytics stack
+              into it later without disturbing the presentation layer.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button primary" href="/dashboard/">Sign In to Dashboard</a>
+              <a class="button secondary" href="#crisis-replay">Review crisis timeline</a>
+            </div>
+
+            <div class="hero-signals">
+              <article class="signal-card">
+                <span class="signal-label">Coverage</span>
+                <strong>33 Indian Banks</strong>
+                <p>Core, PSU, private, regional, and small finance institutions.</p>
+              </article>
+              <article class="signal-card">
+                <span class="signal-label">Data Spine</span>
+                <strong>1.2M+ Rows</strong>
+                <p>2015-01-01 to 2024-12-31 with crisis markers and replay readiness.</p>
+              </article>
+              <article class="signal-card">
+                <span class="signal-label">Supervision</span>
+                <strong>9 Crisis Windows</strong>
+                <p>Includes COVID, Demonetization, IL&amp;FS, Yes Bank, and rate stress.</p>
+              </article>
+            </div>
+          </div>
+
+          <aside class="hero-panel" aria-live="polite">
+            <div class="panel-heading">
+              <span class="panel-eyebrow">National oversight view</span>
+              <div class="status-badge" id="watchLevel">Elevated Watch</div>
+            </div>
+
+            <div class="status-grid">
+              <article class="status-card">
+                <span>Current event</span>
+                <strong id="heroEventName">COVID-19 Pandemic</strong>
+              </article>
+              <article class="status-card">
+                <span>Peak severity</span>
+                <strong id="heroSeverity">88%</strong>
+              </article>
+              <article class="status-card">
+                <span>Affected span</span>
+                <strong id="heroAffected">All 33 banks</strong>
+              </article>
+              <article class="status-card">
+                <span>System note</span>
+                <strong id="heroWindow">2020-03-15 to 2020-06-30</strong>
+              </article>
+            </div>
+
+            <div class="panel-callout">
+              <p class="callout-label">Assessment</p>
+              <p class="callout-text" id="heroContext">
+                National lockdown, emergency rate cuts, and loan moratorium measures generated
+                the strongest systemic spike in the entire watch window.
+              </p>
+            </div>
+          </aside>
+        </section>
+
+        <section class="section mandate" id="mandate">
+          <div class="section-heading">
+            <p class="eyebrow">Institutional mandate</p>
+            <h2>What this shell communicates before your core project is even attached.</h2>
+          </div>
+
+          <div class="pillar-grid">
+            <article class="pillar-card reveal">
+              <h3>Financial stability first</h3>
+              <p>
+                The interface is framed like a serious oversight surface, not a startup
+                dashboard, so the work feels credible to academic, regulatory, and industry
+                audiences.
+              </p>
+            </article>
+            <article class="pillar-card reveal">
+              <h3>Legible across generations</h3>
+              <p>
+                High-contrast type, measured spacing, square forms, and restrained motion keep
+                the site readable for senior domain experts who value clarity over spectacle.
+              </p>
+            </article>
+            <article class="pillar-card reveal">
+              <h3>Brief-aligned content</h3>
+              <p>
+                Coverage, crisis windows, data scope, simulation logic, explainability, and
+                early warning cues are all drawn from the master plan rather than invented.
+              </p>
+            </article>
+            <article class="pillar-card reveal">
+              <h3>Integration-ready shell</h3>
+              <p>
+                A dedicated project dock is kept separate so your later Dash app, charts, or
+                APIs can be mounted without refactoring the surrounding experience.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section crisis" id="crisis-replay">
+          <div class="section-heading split">
+            <div>
+              <p class="eyebrow">Crisis replay</p>
+              <h2>Interactive review of the nine stress windows defined in the brief.</h2>
+            </div>
+            <p class="section-copy">
+              Use the controls to move through the embedded crisis periods and watch the portal
+              update its supervisory framing in real time.
+            </p>
+          </div>
+
+          <div class="replay-shell">
+            <div class="replay-nav">
+              <button class="nav-button" id="prevCrisis" type="button" aria-label="Previous crisis">
+                Previous
+              </button>
+              <div class="slider-shell">
+                <label class="slider-label" for="crisisSlider">Replay position</label>
+                <input id="crisisSlider" type="range" min="0" max="8" value="5" />
+                <div class="slider-meta">
+                  <span id="crisisIndex">06 / 09</span>
+                  <span>Watch window mapped from the PDF brief</span>
+                </div>
+              </div>
+              <button class="nav-button" id="nextCrisis" type="button" aria-label="Next crisis">
+                Next
+              </button>
+            </div>
+
+            <div class="replay-content">
+              <article class="event-spotlight">
+                <p class="event-label" id="crisisAlert">System-wide alert</p>
+                <h3 id="crisisTitle">COVID-19 Pandemic</h3>
+                <p class="event-dates" id="crisisDates">2020-03-15 to 2020-06-30</p>
+                <p class="event-context" id="crisisContext">
+                  National lockdown, emergency rate cuts, and loan moratorium measures created
+                  the most severe stress period in the master plan.
+                </p>
+
+                <div class="impact-grid">
+                  <article>
+                    <span>Peak severity</span>
+                    <strong id="crisisSeverity">88%</strong>
+                  </article>
+                  <article>
+                    <span>Affected institutions</span>
+                    <strong id="crisisAffected">All 33 banks</strong>
+                  </article>
+                  <article>
+                    <span>Operational cue</span>
+                    <strong id="crisisCue">Visible SRI spike</strong>
+                  </article>
+                </div>
+              </article>
+
+              <div class="timeline-list" id="crisisList" aria-label="Crisis list"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section coverage" id="coverage">
+          <div class="section-heading split">
+            <div>
+              <p class="eyebrow">Bank coverage</p>
+              <h2>Explore the 33-bank landscape from core system institutions to periphery risk.</h2>
+            </div>
+            <p class="section-copy">
+              The brief anchors the network around five core banks and extends outward across
+              public sector, private, small finance, and regional institutions.
+            </p>
+          </div>
+
+          <div class="coverage-controls">
+            <div class="filter-row" id="filterRow" role="toolbar" aria-label="Bank filters">
+              <button class="filter-button active" data-filter="all" type="button">All</button>
+              <button class="filter-button" data-filter="core" type="button">Core</button>
+              <button class="filter-button" data-filter="psu" type="button">PSU</button>
+              <button class="filter-button" data-filter="private" type="button">Private</button>
+              <button class="filter-button" data-filter="sfb" type="button">Small Finance</button>
+              <button class="filter-button" data-filter="regional" type="button">Regional</button>
+            </div>
+            <label class="search-shell">
+              <span>Find institution</span>
+              <input
+                id="bankSearch"
+                type="search"
+                placeholder="Search by bank name"
+                autocomplete="off"
+              />
+            </label>
+          </div>
+
+          <div class="bank-board">
+            <div class="bank-grid" id="bankGrid" aria-label="Bank selection list"></div>
+
+            <aside class="bank-detail">
+              <p class="detail-kicker" id="bankClassification">Core Bank</p>
+              <h3 id="bankName">State Bank of India (SBI)</h3>
+              <p class="bank-description" id="bankReason">
+                Largest Indian bank and a domestic systemically important institution with direct
+                national oversight significance.
+              </p>
+
+              <div class="detail-stats">
+                <article>
+                  <span>Watch role</span>
+                  <strong id="bankRole">Anchor node</strong>
+                </article>
+                <article>
+                  <span>Type</span>
+                  <strong id="bankType">Core / PSU</strong>
+                </article>
+                <article>
+                  <span>Priority cue</span>
+                  <strong id="bankCue">System-wide relevance</strong>
+                </article>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="section architecture" id="architecture">
+          <div class="section-heading">
+            <p class="eyebrow">Monitoring architecture</p>
+            <h2>The future-facing functional layers already framed by the shell.</h2>
+          </div>
+
+          <div class="stack-grid">
+            <article class="stack-card reveal">
+              <span>01</span>
+              <h3>Real data ingestion</h3>
+              <p>
+                Designed around 1,205,490 rows, 28 source columns, and replay-ready daily
+                snapshots covering 2015 through 2024.
+              </p>
+            </article>
+            <article class="stack-card reveal">
+              <span>02</span>
+              <h3>Contagion simulation</h3>
+              <p>
+                The structure anticipates transmission logic based on interbank borrowing and
+                exposure ratios rather than abstract connectivity alone.
+              </p>
+            </article>
+            <article class="stack-card reveal">
+              <span>03</span>
+              <h3>Monte Carlo stress metrics</h3>
+              <p>
+                Reserve space for repeated scenario runs, SRI confidence intervals, and
+                sensitivity monitoring across the watch horizon.
+              </p>
+            </article>
+            <article class="stack-card reveal">
+              <span>04</span>
+              <h3>GNN and explainability</h3>
+              <p>
+                Frames model outputs as accountable institutional insight with a clear path from
+                warning level to reasoned explanation.
+              </p>
+            </article>
+            <article class="stack-card reveal">
+              <span>05</span>
+              <h3>3D network supervision</h3>
+              <p>
+                Mirrors the brief’s emphasis on animated network monitoring, floating nodes,
+                controlled camera drift, and clear core-periphery visibility.
+              </p>
+            </article>
+            <article class="stack-card reveal">
+              <span>06</span>
+              <h3>OWASP-aligned security</h3>
+              <p>
+                Communicates enterprise readiness with space for JWT authentication, lockout
+                logic, audit trails, and controlled access boundaries.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section protocol" id="intelligence">
+          <div class="section-heading">
+            <p class="eyebrow">System Intelligence</p>
+            <h2>Advanced analytical engines powering the contagion monitor.</h2>
+          </div>
+
+          <div class="protocol-grid">
+            <article class="protocol-card reveal">
+              <h3>Live Market Feeds</h3>
+              <p>
+                Real-time connection to the NSE allows the system to monitor active stock prices, volatility, and intraday drops to preemptively flag live market stress.
+              </p>
+            </article>
+            <article class="protocol-card reveal">
+              <h3>Graph Neural Networks</h3>
+              <p>
+                Advanced GNN models dynamically assess systemic risk propagation across the banking network, predicting vulnerability cascades before they happen.
+              </p>
+            </article>
+            <article class="protocol-card reveal">
+              <h3>Automated LLM Reporting</h3>
+              <p>
+                Ollama integration instantly generates comprehensive, human-readable intelligence reports detailing the crisis epicenter, spread, and mitigation paths.
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>Standalone portal shell prepared for future integration into your Financial Contagion Monitor project.</p>
+        <p>Brief basis: 33-bank Indian contagion monitor, real data integration, crisis replay, GNN explainability, and EWS framing.</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
