@@ -21,13 +21,13 @@ The platform implements an institutional-grade systemic risk intelligence archit
 
 ## Key Features
 
-- **Graph Attention Network (GAT):** Multi-head attention architecture (`DropEdge`, 14 node features $\to$ 32Ã—4 $\to$ 16Ã—4 $\to$ 2) modeling interbank exposure topology, achieving $AUC \ge 0.95$.
+- **Graph Attention Network (GAT):** Multi-head attention architecture (`DropEdge`, 14 node features ? 32×4 ? 16×4 ? 2) modeling interbank exposure topology, achieving AUC = 0.95.
 - **Interactive 3D Interbank Network:** Dynamic 3D network graph highlighting 1-hop and 2-degree contagion cascades with real-time edge weight attention.
 - **Dual Surveillance Modes:**
   - **Historical Replay:** Interactive chronological replay across 3,653 trading days (2015â€“2024) calibrated on historical crisis spikes (COVID-19 market crash, DHFL, IL&FS).
   - **Live Market Feed:** Real-time NSE/BSE equity telemetry via asynchronous stream with divergence detection against historical benchmarks.
 - **Shock Simulation Playground:** Multi-scenario cascade simulation testing Liquidity, Capital, NPL, and Market shocks across customizable magnitude percentages.
-- **Monte Carlo Stress Testing:** 1,000-trial stochastic risk simulation estimating Systemic Risk Index (SRI) percentiles, $VaR_{95\%}$, $VaR_{99\%}$, and confidence bounds.
+- **Monte Carlo Stress Testing:** 1,000-trial stochastic risk simulation estimating Systemic Risk Index (SRI) percentiles, VaR (95%), VaR (99%), and confidence bounds.
 - **Institutional Role-Based Access Control (RBAC):** 10-layer OWASP security architecture with JWT-enforced authorization across RBI SuperAdmin, D-SIB Admins, and Member Banks.
 - **Real-Time Alert Network:** Sub-3-second distributed WebSocket/polling alert bus supporting multi-node synchronized monitoring.
 - **Automated Crisis Intelligence Reports:** Local LLM reasoning engine (via Ollama) generating formal 6-section supervisory dossiers exportable to high-resolution A4 PDF.
